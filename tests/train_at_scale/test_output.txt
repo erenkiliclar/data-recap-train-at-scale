@@ -14,4 +14,4 @@ tests/train_at_scale/test_model.py::test_model_can_fit PASSED            [ 75%]
 tests/train_at_scale/test_notebook.py::TestNotebook::test_y_pred PASSED  [ 87%]
 tests/train_at_scale/test_processor_pipeline.py::test_preprocess_features PASSED [100%]
 
-======================= 8 passed, 15 warnings in 31.30s ========================
+======================= 8 passed, 15 warnings in 36.33s ========================
