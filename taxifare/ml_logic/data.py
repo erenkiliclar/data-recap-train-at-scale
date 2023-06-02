@@ -3,9 +3,10 @@ import pandas as pd
 from google.cloud import bigquery
 from colorama import Fore, Style
 from pathlib import Path
-
+from taxifare.utils import simple_time_and_memory_tracker
 from taxifare.params import *
 
+@simple_time_and_memory_tracker
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Clean raw data by

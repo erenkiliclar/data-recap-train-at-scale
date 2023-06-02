@@ -27,7 +27,7 @@ def transform_lonlat_features(X: pd.DataFrame) -> pd.DataFrame:
 
     def distances_vectorized(df: pd.DataFrame, start_lat: str, start_lon: str, end_lat: str, end_lon: str) -> dict:
         """
-        Calculate the haversine and Manhattan distances between two 
+        Calculate the haversine and Manhattan distances between two
         points on the earth (specified in decimal degrees)
         Vectorized version for pandas df
         Computes distance in km
@@ -64,14 +64,14 @@ def compute_geohash(X: pd.DataFrame, precision: int = 5) -> np.ndarray:
     assert isinstance(X, pd.DataFrame)
 
     X["geohash_pickup"] = X.apply(lambda x: gh.encode(
-        x.pickup_latitude, 
-        x.pickup_longitude, 
+        x.pickup_latitude,
+        x.pickup_longitude,
         precision=precision
     ), axis=1)
 
     X["geohash_dropoff"] = X.apply(lambda x: gh.encode(
-        x.dropoff_latitude, 
-        x.dropoff_longitude, 
+        x.dropoff_latitude,
+        x.dropoff_longitude,
         precision=precision
     ), axis=1)
 
